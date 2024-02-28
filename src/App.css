@@ -15,17 +15,44 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px; /* Add some padding */
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(20, 20px); /* Adjust based on your preference */
+  grid-template-rows: repeat(20, 20px); /* Adjust based on your preference */
+  gap: 1px; /* Adjust based on your preference */
+  justify-content: center; /* Center the game board horizontally */
+  margin: auto; /* This helps in centering the grid if the .App-header is flex */
+  background-color: #000; /* Optional: Adds a background color to the game board */
+  border: 2px solid #ffffff; /* Optional: Adds a border around the game board */
+}
+
+/* Optional: Add a small space around each cell if you like */
+.cell {
+  width: 18px; /* Adjust the size of the cell */
+  height: 18px; /* Adjust the size of the cell */
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.snake {
+  background-color: #32CD32; /* Lime Green for the snake */
+}
+
+.food {
+  background-color: #FF4500; /* OrangeRed for the food */
 }
 
 @keyframes App-logo-spin {
